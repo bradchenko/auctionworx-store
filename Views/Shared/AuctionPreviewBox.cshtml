@@ -1,0 +1,46 @@
+﻿@model Listing
+@{
+    bool proxy = Model.Lot != null
+        ? Model.Lot.Event.ProxyBidding
+        : bool.Parse(
+            ListingClient.GetListingTypeProperties(Model.Type.Name, "Site").Single(
+                ltp => ltp.Field.Name.Equals(SiteProperties.EnableProxyBidding)).Value);
+
+    List<CustomProperty> auctionProperties = ListingClient.GetListingTypeProperties(ListingTypes.Auction, "Site");
+    bool reserveEnabled = bool.Parse(auctionProperties.Single(ap => ap.Field.Name == SiteProperties.EnableReserve).Value);
+    bool reserveDefined = !string.IsNullOrWhiteSpace(Model.Properties.Where(p => p.Field.Name.Equals(Fields.ReservePrice)).Single().Value);
+    bool quickBidEnabled = false;
+    var quickBidProp = auctionProperties.FirstOrDefault(p => p.Field.Name == SiteProperties.QuickBidEnabled);
+    if (quickBidProp != null)
+    {
+        bool.TryParse(quickBidProp.Value, out quickBidEnabled);
+    }
+    decimal currentMinBidAmount = (Model.CurrentPrice ?? 0) + (Model.CurrentListingAction != null ? (Model.Increment ?? 0) : 0);
+}
+<div class="detail__submit-wrapper">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 detail__price">
+            <strong>@Html.Resource("AuctionListing, CurrentPrice")</strong>
+            <span class="detail__price--current Bidding_Current_Price awe-rt-CurrentPrice">
+                @* do not remove this span, it gets populated via ajax *@
+                @Html.LocalCurrencyWithNumberTags(Model.CurrentPrice.Value, Model.Currency.Code)
+            </span>
+            <span id="convertedprice" class="awe-hidden">
+                (<span class="Bidding_Local_Price" data-currency="@Model.Currency.Code">
+                    @* do not remove this span, it gets populated via AJAX *@
+                    @if (Model.Currency.Code != Html.GetCookie("currency"))
+                    {
+                        @Html.LocalCurrencyWithNumberTags(Model.CurrentPrice.Value.ConvertAmount(Model.Currency.Code, Html.GetCookie("currency")), Html.GetCookie("currency"))
+                    }
+                </span>)
+            </span>
+            @if (reserveDefined || reserveEnabled)
+            {
+                <span class="reserve-not-met awe-rt-ReserveStatus">@Html.Resource("AuctionListing, " + (string)ViewData["ReserveStatus"])</span>
+            }
+        </div>
+        <div class="col-xs-12 col-sm-6 watching__wrapper">
+            @Html.Partial("ListingDetail_AddWatch")
+        </div>
+    </div>
+</div>
