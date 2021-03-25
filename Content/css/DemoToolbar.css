@@ -1,0 +1,92 @@
+﻿
+/* Online Demo Toolbar */
+header {
+    padding-top: 110px;
+}
+
+
+.awe-demo-nav p {padding: 10px 5px 0 5px;margin-bottom: 0;}
+p.awe-demo-title {
+    font-family: Helvetica, Arial,sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+.awe-demo-title small {font-weight: normal;}
+.awe-demo-nav {
+    min-height: 25px;
+    margin-bottom: 5px;
+    padding: 0px 5px;
+    z-index: 100;
+        border: 1px dashed #666;
+    background: #ffffc9;
+    margin-top: 0px;
+   position: fixed; top: 5px;left: 5px; right: 5px;
+}
+.btn-group {margin: 10px 5px 5px 5px;}
+.btn-group a {color:#555;}
+p.input-group{margin-top: 0; padding-top: 0;}
+.demo-user-links {margin-left: 5px;}
+.demo-user-links a:first-child {padding-right: 40px;}
+
+.awe-demo-float {
+    float: left;
+}
+
+.awe-demo-bright {
+    color: #fff;
+}
+
+.awe-reset-caption {
+    /*font-size: x-small;*/
+}
+
+#DemoHeaderContainer {
+    border: 0px;
+    width: 100%;
+    height: 41px;
+    margin: 0px;
+    padding: 0px;
+    min-width: 1000px;
+    overflow-y: hidden;
+}
+
+#AdminBody {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* Demo Users SignOn list */
+
+.demo-users-passwords {
+    background-color: #337ab7;
+}
+
+    .demo-users-passwords > div {
+        background-color: rgba(0,0,0,.25);
+        padding: 15px;
+        color: #fff;
+    }
+
+    .demo-users-passwords .DemoUserNameLink {
+        color: #fff;
+    }
+    .demo-users-passwords .DemoUserNameLink:hover {
+        color: #fff;
+    }
+    .demo-users-passwords .DemoUserNameLink:visited {
+        color: #fff;
+    }
+    #DemoUsers .DemoUserNameLink {
+        color: #000;
+    }
+    #DemoUsers .DemoUserNameLink:hover {
+        color: #000;
+    }
+    #DemoUsers .DemoUserNameLink:visited {
+        color: #000;
+    }
+#ShowDemoUsersListButton {
+    margin-top: 10px;
+}

@@ -1,0 +1,1268 @@
+/*******************
+[Color Codes]
+# White : #fff
+# Black : #000
+# Blue : #3399cc
+# Dark Blue : #2b88b7
+# Light Grey : #ebebeb
+# Medium Grey : #999
+# Ultra Light Grey : F7F7F7
+# Dark Grey : #333
+# Light Yellow : #ffffcc
+# Light Orange : #ffcc99
+********************/
+
+/*****Basic Elements******/
+body {text-align: center;font-size:100%; font-family: Arial, Sans-Serif; }
+
+p {margin:10px 0;}
+
+input, select {font-family: Arial, Sans-Serif;}
+
+a:link {color: #2b88b7}
+a:visited {} 
+a:hover{}
+a:active {}
+
+th {text-align: left;}
+
+/*****Generic Elements******/
+.DIVclear {clear: both;display: block;height: 10px;}
+.DIVclear0 {clear: both;display: block;height: 0px;}
+.alignright {text-align: right;}
+.Required {color: red; font-size: 100%;font-weight: normal;margin: 0 3px;}
+.Required_Notice {padding: .2em;font-size: 100%;}
+.modalDialogContent {display: none; text-align: left; font-weight:normal;overflow: auto;}
+#Breadcrumbs {margin: 3px 5px 0px 0px;}
+ #Breadcrumbs a{color:#3399cc;} 
+.SelectorDisplay {border: 1px solid #999;height: 200px;margin-right: 15px;padding:10px;}/*****Category/Region Selector AJAX******/
+.SpacerImage {height:200px; width:1px; vertical-align:bottom;}/*****Category/Region Selector AJAX******/
+.ResetRegionButton {vertical-align: bottom; margin-bottom: 0px;}/*****Region Selector AJAX******/
+.Error {background:#FBE3E4;color:#8a1f11;border:2px solid #FBC2C4;padding:5px;margin: 5px 0px;}
+.Message {background:#FFF6BF;color:#514721;border:2px solid #FFD324;padding:5px;margin: 5px 0px;}
+.Success {background:#E6EFC2;color:#264409;border:2px solid #C6D880;padding:5px;margin: 5px 0px;}
+
+.alert {padding:5px;margin: 5px 0px;}
+.alert-danger {background:#FBE3E4;color:#8a1f11;border:2px solid #FBC2C4;}
+.alert-info {background:#FFF6BF;color:#514721;border:2px solid #FFD324;}
+.alert-success {background:#E6EFC2;color:#264409;border:2px solid #C6D880;}
+
+#AdminHeaderSystemMessages div.Error {margin-top: 15px;}
+#AdminHeaderSystemMessages div.Message {margin-top: 15px;}
+#AdminHeaderSystemMessages div.Success {margin-top: 15px;}
+
+.GreyCallout {background:#dadada;border:2px solid #adadad;padding:3px;margin: 5px 0px;}
+.PageNavigation {border: 1px solid #ccc;color: #333;margin: 5px 0; padding: 5px; text-align: center; background: url(../../../Content/images/Template/Sprite001.png) 0% -301px repeat-x;}
+ .PageNavigation a{color: #333; text-decoration: none;}
+ .PageNavigation a:hover{color: #333; font-weight: bold; text-decoration: underline;}
+.nowrap {white-space:nowrap}
+
+.h2row {border: 1px solid #5F9F9F;color: #fff;font-size: 115%;padding: 5px;margin-top: 5px ; background:  url(../../../Content/images/Template/Sprite001.png) 0px -356px repeat-x;}
+ .h2row a{color: #fff; text-decoration: none;}
+   .h2row a:hover{text-decoration: underline;}
+h3.h3row {border: 1px solid #ccc;color: #333;font-size: 115%;margin: 5px 0; padding: 5px; background: url(../../../Content/images/Template/Sprite001.png) 0% -301px repeat-x;}
+    h3.h3row a{color: #333; text-decoration: none;}
+    h3.h3row button {margin: -5px 0px;}
+h3.h3row2 {border: 1px solid #ccc;color: #333;font-size: 115%;margin-top:5px; padding: 5px; background: url(../../../Content/images/Template/Sprite001.png) 0% -301px repeat-x;}
+    h3.h3row2 a{color: #333; text-decoration: none;}
+h4.h4row {border: 1px solid #ccc;color: #333;font-size: 115%;margin: 5px 0; padding: 3px; background: #FFFACD;}
+h5.h5row {border: 1px solid #ccc;color: #333;font-size: 115%;margin: 0; padding: 3px; background: #FFFACD;}
+
+
+/* Column Width Assignments*/
+
+.Column1 {margin: 0px 10px; width: 60px;}
+.Column2 {margin: 0px 10px; width: 140px;}
+.Column3 {margin: 0px 10px; width: 220px;}
+.Column4 {margin: 0px 10px; width: 300px;}
+.Column5 {margin: 0px 10px; width: 380px;}
+.Column6 {margin: 0px 10px; width: 460px;}
+.Column7 {margin: 0px 10px; width: 540px;}
+.Column8 {margin: 0px 10px; width: 620px;}
+.Column9 {margin: 0px 10px; width: 700px;}
+.Column10 {margin: 0px 10px; width: 780px;}
+.Column11 {margin: 0px 10px; width: 860px;}
+.Column12 {clear: both; width: 940px;}
+.Column1,.Column2,.Column3,.Column4,.Column5,.Column6,.Column7,.Column8,.Column9,.Column10,.Column11,.Column12 {
+    display: inline;
+    float: left;
+    margin: 0px 10px;}
+
+/******* Variable Width *********/
+.Column1_VW {width: 8%; min-width: 60px;}
+.Column2_VW {width: 17%; min-width: 140px;}
+.Column3_VW {width: 25%; min-width: 220px;}
+.Column4_VW {width: 33%; min-width: 300px;}
+.Column5_VW {width: 42%; min-width: 380px;}
+.Column6_VW {width: 50%; min-width: 460px;}
+.Column7_VW {width: 58%; min-width: 540px;}
+.Column8_VW {width: 67%; min-width: 620px;}
+.Column9_VW {width: 75%; min-width: 700px;}
+.Column10_VW {width: 83%; min-width: 780px;}
+.Column11_VW {width: 92%; min-width: 860px;}
+.Column12_VW {clear: both; width: 100%; min-width: 960px;}
+.Column1_VW,.Column2_VW,.Column3_VW,.Column4_VW,.Column5_VW,.Column6_VW,.Column7_VW,.Column8_VW,.Column9_VW,.Column10_VW,.Column11_VW,.Column12_VW {
+    display: inline;
+    float: left;
+    margin: 0px 10px;}
+
+/*****Basic Layout******/
+#Container {background-color: white; font-size: 0.75em;
+	margin: 0 auto;
+	text-align: left;
+	width: 960px;}
+  #Container fieldset {border: 1px solid #ccc;
+	margin-top: .8em;
+	margin-bottom: .8em;
+	padding: 0em .4em .4em .4em;}
+  #Container fieldset ul {list-style: none;}
+  #Container label {display:inline-block; margin-top: .8em;}
+  #Container legend {color: #000; font-weight: bold; padding-left: .4em; padding-right: .4em;}
+
+/***** Tooltip *****/
+.ToolTip{position:relative; color: blue; }
+ .ToolTip span{display: none;}
+.ToolTip_Hover{position:relative;}
+ .ToolTip_Hover span{width: 20em;
+  padding: .8em;
+  font-style: normal;
+  display:block;
+  position:absolute;
+  border:2px solid #ccc;
+  top:1.3em;
+  left: 3.0em;
+  background: #fff;
+  z-index : 9999;
+
+  } 
+  
+.ToolTip2{position:relative;Width: 24px;} /* */
+ .ToolTip2 span{display: none;}
+.ToolTip2_Hover{position:relative;Width: 24px;}
+ .ToolTip2_Hover span{width: 200px;
+  padding: 5px;
+  font-style: normal;
+  display:block;
+  position:absolute;
+  border:2px solid #ccc;
+  top:25px;
+  left: -210px;
+  background: #FFFFAA;
+  z-index: 9999;
+  } 
+ .ToolTip2_Double {margin-left: -220px;}
+
+.ToolTip3{position:relative;Width: 24px;} /* */
+ .ToolTip3 span{display: none;}
+.ToolTip3_Hover{position:relative;Width: 24px;}
+ .ToolTip3_Hover span{width: 325px;
+  padding: 5px;
+  font-style: normal;
+  display:block;
+  position:absolute;
+  border:2px solid #ccc;
+  top:25px;
+  left: -210px;
+  background: #FFFFAA;
+  z-index: 9999;
+  } 
+
+/**** /Account/Register ****/
+span.ToolTip {display: inline-block; vertical-align: middle;}
+span.ToolTip_Hover {display: inline-block; vertical-align: middle;}
+span.ToolTip2 {display: inline-block; vertical-align: middle;}
+span.ToolTip2_Hover {display: inline-block; vertical-align: middle;}
+
+/*****Specialty Buttons / Input Buttons******/
+.DefaultButton { 
+    background-color:#ebebeb;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#333;
+    padding:1px 5px}
+  .DefaultButton:hover{color:#000; background-color: #C3E4ED;}
+.DisabledButton { 
+    background-color:#ebebeb;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#aaa;
+    padding:1px 5px}
+  /*.DisabledButton:hover{color:#000; background-color: #C3E4ED;}*/
+.TurnOffButton { 
+    background-color:#E6EFC2;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#333;
+    padding:1px 5px}
+  .TurnOffButton:hover{color:#000; background-color: #C3E4ED;}
+.TurnOnButton { 
+    background-color:#FBE3E4;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#333;
+    padding:1px 5px}
+  .TurnOnButton:hover{color:#000; background-color: #C3E4ED;}
+#Registration_Button {background-color:#f5f5f5;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#333;
+    padding:1px 5px;
+    float: right;}
+  #SignIn_Button:hover{color:#000; background-color: #C3E4ED;}
+#SignIn_Button {background-color:#f5f5f5;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#333;
+    padding:1px 5px;
+    margin-left:225px;}
+  #SignIn_Button:hover{color:#000; background-color: #C3E4ED;}
+#MenuSearch_Button {background-color:#f5f5f5;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#333;
+    padding:1px 5px}
+  #MenuSearch_Button:hover{color:#000; background-color: #C3E4ED;}
+.SubmitBid_Button{background-color:#C3E4ED;
+    border:1px solid #999;
+    border-top:1px solid #F0F0F0;
+    border-left:1px solid #F0F0F0;
+    font-family: Arial, Sans-Serif;
+    font-weight:bold;
+    color:#333;
+    padding:1px 5px}
+  .SubmitBid_Button:hover{color:#000; background-color: #f5f5f5;}
+.FormButtonAlignment {text-align: center;}
+/*****Header******/               
+#SiteHeader {margin-bottom: 10px;}
+#UserSignInLinksContainer {color: #000; font-size: 115%;
+          padding: 2px 10px 2px 10px;
+          text-align: center;} 
+ #UserSignInLinksContainer a{color: #333;font-weight: bold;text-decoration: none;}
+ #UserSignInLinksContainer a:hover {color:#2b88b7;}
+#UserSignInLinksContainer #UserSignInLinks {margin: 0 auto; text-align: right;}
+#UserSignInLinksContainer #UserSignInGreeting{color:#2b88b7;}
+
+#Logo {margin: 10px 0px;}
+
+#Menu {margin-bottom: 10px;}
+#Menu_Top{background: url(../../../Content/images/Template/Sprite001.png) 0px -139px repeat-x;font-weight: bold; font-size: 115%; height: 30px;}
+ #Menu_Top .Menu_Top_Link {float: left;height: 20px; margin:6px 35px 0px 0px;}
+ #Menu_Top a{color:#333;text-decoration: none; }
+ #Menu_Top a:hover {color: #2b88b7;}
+#Menu_Top_Left {background: url(../../../Content/images/Template/Sprite001.png) 0px -31px no-repeat;float: left;height: 30px; width: 10px;}
+#Menu_Top_Right {background: url(../../../Content/images/Template/Sprite001.png) -90px -85px no-repeat;float: right;height: 30px; width: 10px;}
+
+#Menu_Middle {background: url(../../../Content/images/Template/Sprite001.png) 0px -356px repeat-x;border: 1px solid #5F9F9F;padding:5px;}
+
+#Menu_Bottom{background: url(../../../Content/images/Template/Sprite001.png) 0px -332px repeat-x;height: 20px;}
+ #Menu_Bottom .Menu_Bottom_Link {text-align:right;padding-top:2px;}
+ #Menu_Bottom a{color:#333;text-decoration: none; }
+ #Menu_Bottom a:hover {color: #2b88b7;}
+#Menu_Bottom_Left {background: url(../../../Content/images/Template/Sprite001.png) 0px -224px no-repeat;float: left;height: 20px; width: 10px;}
+#Menu_Bottom_Right {background: url(../../../Content/images/Template/Sprite001.png) -90px -278px no-repeat;float: right;height: 20px; width: 10px;}
+
+#Menu_Admin{font-weight: normal; font-size: 115%; height: 30px;}
+ #Menu_Admin .Menu_Admin_Link {float: right; margin:10px 25px 0px 0px;}
+ #Menu_Admin a{color:#333;text-decoration: none; }
+ #Menu_Admin a:hover {color: #2b88b7;text-decoration: underline; }
+
+#Search_Basic {}
+
+/*****Content******/
+
+/*****Content - Basic Form : Registration ******/
+#Form_Registration {}
+ #Form_Registration label {width: 210px;}
+#Form_Registration_CMS {}
+.Form_Registration_Country select{width: 250px;}
+.Form_Registration_Help {font-size: 100%; padding-left: 215px;}
+
+
+/*****Content - Sign In******/
+#RememberMe {float: left; width: 200px;}
+
+/*****Content - Create Listing Form/Page******/
+#Listing_Create_Form {}
+#ListingFormButtonAlignment { text-align: center; margin-top: 10px; }
+
+/*****Content - Listing Detail Page******/
+h1#Listing_Details_Category {font-size: 100%;}
+ h1#Listing_Details_Category a{text-decoration: none;}
+h1#Listing_Details_Title {border-bottom: 2px solid #ccc; font-size: 125%;margin-top: 10px;}
+ h1#Listing_Details_Title i{color: #999; font-size: 100%;} /**** listing number *****/
+h1#Listing_Details_SubTitle {font-size: 100%;}
+#Listing_Details_Status {border: 1px solid #ccc;color: #333;margin: 5px 0; padding: 2px; background: #FFFACD;}
+#Listing_Details_Data {}
+ #Listing_Details_Data p {}
+ #Listing_Details_Data b {}
+ #Listing_Details_Data table {padding: 0px; margin: 0px;}
+ #Listing_Details_Data td {vertical-align: top;padding-bottom: 3px; margin: 0px;}
+#Listing_Details_BidPrice {background:#E6EFC2;color:#264409;border:1px solid #C6D880;padding:5px;margin: 5px 0px;}/* Both Auction Bid and Fixed Price */
+#Listing_Details_BuyNowPrice {background:#E6EFC2;color:#264409;border:1px solid #C6D880;padding:5px;margin: 5px 0px;}/* Both Auction Bid and Fixed Price */
+#Listing_Details_PricingInfo {border: 1px solid #ccc;color: #333;margin: 5px 0; padding: 5px; background: #ebebeb;}
+	.Bidding_BuyNowt_Price {font-weight: bold; color: Green;}
+
+#Listing_Details_QuantityInfo {border: 1px solid #ccc;color: #333;margin: 5px 0; padding: 5px; background: #ebebeb;}
+#Listing_Details_Images {}
+#Listing_Details_Images_Thumbnails {border-top: 1px solid #999;margin-top: .4em;}
+ #Listing_Details_Images_Thumbnails img{margin: 2px 0px 0px 0px;}
+#Listing_Details_NoPhoto {height: 175px; padding-top:125px;width: 458px;border: 1px solid #ccc; background: #ebebeb; color:#999;text-align: center;}
+
+#Listing_Details_Bid_Form { background:#ededed; border: 1px solid #ccc;padding: 5px;}
+  #Listing_Details_Bid_Form table {width: 100%;padding: 0px; margin: 0px;}
+  #Listing_Details_Bid_Form td {padding: 0px; margin: 0px;vertical-align: top;}
+#Listing_Details_Type {font-style: italic; font-size: 100%; width: 40%;}
+#Listings_Details_Custom {}
+#Listings_Details_Description {overflow: visible;}
+#Listing_Details_ShippingOpts {margin-top: 5px;}
+#Listing_Details_FinalBuyerFee {margin-top: 5px;}
+#Listing_Details_PaymentOpts {margin-top: 5px; line-height: 20px;}
+.ReserveNotMet{color: Red;}
+.Listing_Note {font-size: 75%;}
+.ListingDetailsSectionLabel {border: 1px solid #ccc;color: #333;margin: 5px 0; padding: 5px; background: #ebebeb;}
+#FinalBuyerFeeTierDetails { margin-top: 10px; border: 1px solid #eee; width: 100%}
+		/*****container classes for prices, increments, and minimum bids******/
+		/*****DO NOT MODIFY THE FOLLOWING CLASS NAMES******/
+		/******Please feel free to edit the class properties/values*******/
+		.Bidding_Current_Price {font-weight: bold; color: Green;}
+		.Bidding_Local_Price {font-size:75%;}
+		.Bidding_Listing_Increment {}
+		.Bidding_Local_Increment {font-size:75%;}
+		.Bidding_Listing_MinPrice {}
+		.Bidding_Local_MinPrice {font-size:75%;}
+
+/*****Cofirm Bid / Purchase******/
+#ConfirmAction {background:#FFF6BF;color:#514721;border:2px solid #FFD324;padding:5px;margin: 5px 0px;}
+.BuyerFeeConfirmationRow1 { font-size: 110%; }
+.BuyerFeeConfirmationRow2 { font-size: 110%; font-weight: bold; }
+
+/*****Content - Browse/MyAccount/Admin Category Display List******/
+ul.CategoriesList {list-style:none;margin: 0px 0px 5px 0px;}
+ul.CategoriesList a {color: #000;text-decoration: none;}
+ul.CategoriesList a:hover {color: #2b88b7}
+li.CategoryList, li.RegionList, li.StoreList, li.EventList, li.MyAccount_MenuList1, li.MyAccount_MenuList2
+{   border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc; padding: 5px; 
+    background: url(../../../Content/images/General/Gradient-fff-ccc.png) 0% -50px repeat-x;}
+li.MyAccount_MenuList1 {}
+li.MyAccount_MenuList2 {} 
+li.currentCategory
+{
+    background-color: #caced2;   
+    background-image: url(../../../Content/images/General/clear.gif);
+}
+
+#Categories {width:200px;white-space:nowrap;}
+ #Categories ul{list-style-type: none;}
+  #Categories ul li {padding: 2px;}
+ #Categories ul a {color: #333;font-weight:bold; text-decoration:none;}
+ #Categories ul a:hover {text-decoration:underline;}
+
+/***** Listing Displays *****/
+
+.HomePageFeaturedItem{float: left;height: 230px;width: 158px;margin: 5px 5px 0px 0px;border: 1px solid #ccc;white-space:nowrap;text-align: center;padding: 5px;overflow:hidden;}
+.HomePageFeaturedItem h1 {font-size: 115%;height: 20px;margin: 5px 5px 0px 5px ;}
+.HomePageFeaturedItem a {color: #000;text-decoration:none;}
+.HomePageFeaturedItem img {}
+.HomePageFeaturedItem_time {font-size: 100%;margin-bottom: 3px;}
+.HomePageFeaturedItem_price {}
+.HomePageFeaturedSubtitle {font-style: italic;font-size: 100%;}
+.HomePageFeaturedItem_NoPhoto {margin: 0px auto; height: 148px; width: 148px; border: 1px solid #ccc; background: #ebebeb; color:#999;font-size: 100%; text-align: center;}
+
+#ItemListingContainer {border-top: 1px solid #ccc;}
+ #ItemListingContainer table {width: 100%}
+ #ItemListingContainer table a {/*color: #000;*/ text-decoration: none;}
+ #ItemListingContainer table a:hover {text-decoration: underline;}
+#ItemListingDisplay {width: 100%;}
+#ItemListingDisplay a {/*color: #000;*/}
+#ItemListingDisplay td{border-bottom: 1px solid #ccc; padding: 5px 5px 5px 0;}
+.ItemListingDisplay_NoPhoto {height: 148px; width: 148px; float: left;margin-right: 5px;border: 1px solid #ccc; background: #ebebeb; color:#999;font-size: 100%; text-align: center;}
+.ItemListingDisplay_Price {font-weight: bold; color: Green;}
+td.ItemListingDisplay_Thumbnail {width:155px; text-align: left;}
+
+.Listings_Sort {text-align:right; margin: 5px 0px;}
+
+/*-------------- Rotated Label (begin) ------------------*/
+
+td.InformationCell
+{    
+    width: 130px;
+
+}
+
+.InformationCellMain
+{
+    height: 100%;
+    position: relative;   
+}
+
+.showInfo
+{
+    position: relative;   
+    z-index: 100;
+    
+    }
+.DisplayBannerColumn
+{
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    right: 0px;
+    vertical-align:bottom;
+    z-index:1;
+}
+
+.AuctionListingTypeIdentifierBanner
+{
+    background-image:url(../../../Content/images/auctionBanner.png);
+}
+
+.ClassifiedListingTypeIdentifierBanner
+{
+    background-image:url(../../../Content/images/classifiedAdBanner.png);
+}
+
+.FixedPriceListingTypeIdentifierBanner
+{
+    background-image:url(../../../Content/images/fixedPriceBanner.png);
+}
+
+.ListingDisplayBanner
+{
+    color: #4782b7;
+    width: 85px;
+    height: 85px;
+    float: right;
+
+}
+
+/*
+    Rotated text for listing rows
+*/
+.listing-label
+{
+    display: block;
+    position: relative;
+    font-family: Arial;
+    font-weight: bold;    
+    color: #ffffff;
+    font-size: 14px;
+    padding-right: 22px;
+    padding-top: 46px;
+    text-align: center;
+    transform: translate3d(0,0,0);
+
+  -webkit-transform: rotate(-45deg);  /* Safari 3.1+, Chrome */
+     -moz-transform: rotate(-45deg);  /* Firefox 3.5-15 */
+      -ms-transform: rotate(-45deg);  /* IE9+ */
+       -o-transform: rotate(-45deg);  /* Opera 10.5-12.00 */
+          transform: rotate(-45deg);  /* Firefox 16+, Opera 12.50+ */  
+          -webkit-backface-visibility: hidden;
+}
+
+/*-------------- Rotated Label (end) ------------------*/
+
+/*****Content - ListingActionHistory / Bid History******/
+
+#ListingActionList table {width: 100%;}
+ #ListingActionList td{border-bottom: 1px solid #ccc;}
+ #ListingActionList th{background-color: #ebebeb;padding: 3px;}
+
+.BackLinkContainer
+{
+	margin-top: 8px; 
+	margin-bottom: 8px;
+}
+.BackLinkContainer a
+{
+	text-decoration: none;
+	color: #000;
+}
+
+/*****Content - MyAccount Display******/
+
+ul.MySummary {font-size: 18px;list-style: none; margin: 0px 0px 0px 15px; padding: 0px;} 
+li.MySummaryTitle {font-weight: bold;padding: 5px 0px 3px 0px;}
+li.MySummaryInfo {padding: 3px 0px 3px 15px;}
+
+.MyAccount_Table1 {width: 100%;padding-top: 5px;table-layout: fixed;}
+.MyAccount_Table1 th{background: url(../../../Content/images/General/Gradient-fff-ccc.png) 0 -110px repeat-x;
+                    border: 1px solid #ebebeb;
+                    font-weight: bold;color: #333;}
+.MyAccount_Table1 th,td {padding: 3px;vertical-align:top;}
+ .MyAccount_Table1 th a {text-decoration: none;}
+ .MyAccount_Table1 th a:hover {text-decoration: underline;font-weight: bold;}
+ .MyAccount_Table1 i{font-size: 100%;}
+.MyAccount_Table1_CheckBox {border-bottom: 1px solid #ccc;vertical-align:middle;}
+.MyAccount_Table1_Thumb {border-bottom: 1px solid #ccc;width: 150px;padding: 3px 3px 3px 0px;}
+.MyAccount_Table1_Title {overflow: hidden;}
+ .MyAccount_Table1_Title a{color: #000;text-decoration: none;}
+ .MyAccount_Table1_Title a:hover {text-decoration: underline;}
+.MyAccount_Table1_Actions {text-align: right; border-bottom: 1px solid #ccc;}
+.MyAccount_Table1_Border {border: 1px solid #ebebeb;}
+.MyAccount_Table1_DefaultUnderline {border-bottom: 1px solid #ccc;}
+
+.MyAccount_Table2{width: 60%;padding-top: 5px;}
+
+.MyAccount_FeedbackTable {width: 100%;padding-top: 5px;/*table-layout: fixed;*/}
+ .MyAccount_FeedbackTable th
+ {
+	background: url(../../../Content/images/General/Gradient-fff-ccc.png) 0 -110px repeat-x;
+    border: 1px solid #ebebeb;
+    font-weight: bold; color: #333;
+ }
+ .MyAccount_FeedbackTable th,td {padding: 3px;vertical-align:top;}
+ .MyAccount_FeedbackTable th a {text-decoration: none;}
+ .MyAccount_FeedbackTable th a:hover {text-decoration: underline;font-weight: bold;}
+
+.FeedbackPeriodRow {text-align: right; padding-right: 10px;}
+.FeedbackPeriodRow span,select {vertical-align: middle;}
+.FeedbackSmallerColumn {width:15%;}
+.FeedbackMediumColumn {width:20%;}
+
+.NoPhoto {height: 148px; width: 148px;border: 1px solid #ccc; background: #ebebeb; color:#999;font-size: 100%; text-align: center;}
+.ColorKey span{font-weight: bold;margin: 20px;}
+.awe-winning-key {color: Green;font-weight: bold;}
+.awe-winning-reserve-key {color: Orange;font-weight: bold;}
+.awe-not-winning-key {color: Red;font-weight: bold;}
+.PaidColor {color: Green;font-weight: bold;}
+.PendingColor {color: Orange;font-weight: bold;}
+.UnpaidColor {color: Red;font-weight: bold;}
+.MyAccount_Sort {text-align: right;margin-bottom: 5px;}
+.SecondaryAccountData {color: #999;}
+.PrimaryAddress {color:#000; background: #E6EFC2; margin: 0px; font-weight:bold; border: 0px;}
+.PrimaryCC {color:#000; background: #E6EFC2; margin: 0px; font-weight:bold; border: 0px;}
+.CCBillingAddress{/*margin-left: 20px;*/}
+  .CCBillingAddress h5{background: #F7F7F7; display:none;}
+
+td.NewMessageColumn { text-align:center; vertical-align: top; padding-top: 15px; }
+span.NewMessage { color:#000; background: #E6EFC2; margin: 0px; padding:3px; font-weight:bold; }
+
+.MyAccountRowA { background: #fff; }
+.MyAccountRowB { background: #f7f7f7; }
+
+/***** InvoiceDetail *****/
+#PaidInvoiceHeaderTable 
+{
+    background-image:url(../../../Content/images/paidStamp.png);
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+
+#PaidShippedInvoiceHeaderTable 
+{
+    background-image:url(../../../Content/images/paidStamp.png),url(../../../Content/images/shippedStamp.png);
+    background-position:40% top, 60% top;
+    background-repeat:no-repeat;
+}
+
+#UnpaidShippedInvoiceHeaderTable 
+{
+    background-image:url(../../../Content/images/shippedStamp.png);
+    background-position:center top;
+    background-repeat:no-repeat;
+}
+
+#SubmitPayPal
+{
+	background-image: url(../../../Content/images/paypalbutton-1.gif); 
+    background-position: right; 
+    width: 123px; 
+    height: 38px; 
+    text-align: left; 
+    border: 1px solid orange; 
+    font-weight: bold; 
+    padding: 0px 30px 3px 3px; 
+    font-size: 12px;
+}
+.InvoicePaymentInstructions { margin: 10px 5px 10px 5px; }
+.InvAmountInput { width: 140px; }
+
+/***** Advanced Search *****/
+.Form_Seach_Help {font-size: 100%;}
+
+/***** SiteMap *****/
+#SiteMap li {margin: .3em .5em;}
+#SiteMap a {color: #333}
+#SiteMap a:link {text-decoration: none;}
+#SiteMap a:visited {} 
+#SiteMap a:hover{text-decoration: underline;}
+#SiteMap a:active {}
+
+/*****Footer******/
+#Footer {}
+#RegionCurrencyRow {margin-top: 10px;}
+#Copyright {margin-top: 10px;}
+#FooterLinks {float:left;}
+#Time {width: 300px; text-align: right; float: right;}
+
+/***** Html Helper Classes *****/
+.field-validation-error {color: #8a1f11;} /* Error text from a Validation Message (next to the error location on page) */
+.input-validation-error /* Specific input that' is causing the error. i.e. the textbox, drop down, etc. */
+{background-color: #FBE3E4; border: 0px; padding: 2px; outline: 2px solid #FBC2C4;}
+.validation-summary-errors /* The summary of validation errors - display at the top of a form */
+{   background:#FBE3E4;
+    color:#8a1f11;
+    border:2px solid #FBC2C4;
+    padding:5px;
+    margin: 5px 0px;}
+.requiredField{color:Red;}
+
+/*****image uploading*****/
+DIV.ProgressBar { width: 100px; padding: 0; border: 1px solid black; margin-right: 1em; height:.75em; margin-left:1em; display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline; }
+DIV.ProgressBar DIV { background-color: Green; font-size: 1pt; height:100%; float:left; }
+SPAN.asyncUploader OBJECT { position: relative; top: 5px; left: 10px; }
+.imagecontainer {margin-right: 10px; width: 150px; height: 150px; float:left; border: 1px solid transparent;}
+.imagecontainer-highlight {margin-right: 10px; width: 150px; height: 150px; float:left; border: 1px solid grey; background-color:#CCC;}
+#sortablethumbnails{overflow: hidden;}
+
+/****** For all Feedback Stars ******/
+#Feedback_Table td{text-align: left;}
+.stars-off {margin-bottom: 2px;}
+.stars-off, .stars-on {
+     position: relative;
+     height: 16px;
+     background: url(../../../Content/images/General/jquery.ui.stars.gif) repeat-x 0 -32px;}
+.stars-on {
+     position: absolute;
+     background-position: 0 -48px;}
+
+/****** Admin Dashboard ******/
+.AdminTable { width: 100%;}
+.AdminDashTable {width: 100%;}
+  .AdminDashTable th{background: #ebebeb;}
+  .AdminDashTable td{border-bottom: 1px solid #ebebeb;}
+.AdminAltRow { background-color: #e9e9e9; } /***** Highlight for alternating data *****/
+
+  		/*****DO NOT MODIFY THE FOLLOWING ID NAMES******/
+		/******Please feel free to edit the class properties/values*******/
+        #ListingTypeID {min-width: 150px;}
+        #CustomFieldID {min-width: 150px;}
+
+/****** /Admin/SiteFeesReport ******/
+div#AdminDateRangeInputArea { float: left; font-size: 100%; }
+div#AdminDateRangeInputArea input { /*font-size:  100%;*/ }
+div#AdminDateRangeInputArea input[type=text] { width: 100px; }
+div#AdminSortDropdownArea { float: right; font-size:  100%; }
+
+table#AdminSiteFeesReport { width: 100%; }
+table#AdminSiteFeesReport th { padding: 2px; background-color: #c9c9c9;}
+table#AdminSiteFeesReport td { padding: 2px; }
+
+
+/****** /Admin/Summary ******/
+table.AdminSummary {}
+td.AdminSummaryInfo {font-size: 18px; text-align: right; padding-left: 10px; padding-right: 5px;}
+td.AdminSummaryTitle {font-size: 18px;}
+
+/****** /Admin/CreateField ******/
+.AdminTitleCol {width: 100px; vertical-align:middle;}
+.AdminInputCol {vertical-align:middle;}
+.AdminHelpText 
+{
+	border: 1px solid #c9c9c9; background: #e9e9e9;
+	font-size: 11px; 
+    width: 400px; float: left; 
+    padding: 5px; margin-left: 10px;
+}
+
+/****** /Account/Fees ******/
+div.PaymentOptSection {margin-top: 5px; margin-bottom: 10px;}
+
+#AuthNetCcOptions td {vertical-align: middle;}
+.AuthNetCol1 {width: 25px;}
+.AuthNetCol2 {width: 115px;}
+.AuthNetCol3 {width: 135px;}
+.AuthNetCol4 {width: 145px;}
+.AuthNetCol5 {width: 145px;}
+.AuthNetCol6 {width: 180px;}
+.CreditCardType {width: 110px;}
+.CreditCardNumber {width: 120px;}
+.CreditCardExpMonth {width: 60px;}
+.CreditCardExpYear {width: 60px;}
+.CreditCardCVV {width: 35px;}
+div.BillAddrContainer {float: left; width: 200px; margin-top: 5px;}
+
+/****** /Admin/CategoryEditor ******/
+.AdminAddCatButton {}
+.AdminDeleteCatButton {margin-right: 10px; float: left;}
+.AdminEditCatButton {margin-right: 10px; float: left;}
+#SelectedCategoryName {font-size: 12px; margin-left: 10px; font-weight: bold;}
+
+/****** /Admin/Banners ******/
+#ShowCreateBannerForm {  }
+#BannersFiltersForm { float: right; width: 400px; font-weight: bold; text-align: right; }
+#BannerLocationFilter {  }
+
+.CreateBannerForm { }
+
+.NewBanner {margin-bottom: 10px; background: #F7F7F7;width: 100%;font-weight: bold;}
+.NewBanner td { padding: 4px;}
+td.BannerCatReg {width: 250px;}
+table.BannerTable1 {width:100%;}
+.BannerHtmlBox { width: 620px; height: 100px; }
+
+#ExistingBanners {margin-top: 10px;border-collapse: collapse; width: 100%; font-weight: bold;}
+#ExistingBanners th, td { padding: 4px; }
+
+.UpdateBannerCol1 { width: 70px; }
+.UpdateBannerCol2 { width: 135px; }
+.UpdateBannerCol3 {}
+.UpdateBannerCol4 { width: 130px; }
+
+.BannerLinkInput { width: 350px; }
+.AdminBannerImage { max-width: 700px; }
+
+.TopLevelDropdown { margin-left: 0px; width: 200px; }
+.ChildDropdown { margin-left: 10px; width: 190px; }
+    
+.AddCategorySection { margin-bottom: 10px; }
+.CategoryDropdown {  }
+.AddCategoryLink {  }
+.RemoveCategoryLink {  }
+    
+.AddRegionSection { margin-bottom: 10px; }
+.RegionDropdown {  }
+.AddRegionLink {  }
+.RemoveRegionLink {  }
+
+.UpdateBannerButton {  }
+
+#AdminTable1 th,td
+{
+	padding: 3px;
+}
+.AdminTableHeaderRow { background-color: #ddd; }
+.AdminRowA { background-color: #fff; }
+.AdminRowB { background-color: #F7F7F7; }
+
+.TopBannerContainer
+{
+    clear: both;
+    width: 940px;
+    display: inline;
+    float: left;
+    margin: 10px 10px 8px 10px;
+	text-align: center;
+}
+.LeftBannerContainer { margin-top: 0px; }
+.BottomBannerContainer
+{
+    clear: both;
+    width: 940px;
+    display: inline;
+    float: left;
+    margin: 0px 10px 0px 10px;
+	text-align: center;
+}
+.BannerImage { }
+.SideBannerImage { margin-top: 10px; }
+.SideBannerImageTop { margin-top: 5px; }
+
+/*------------------ item list pages / shipping details (begin) -----------------*/
+.ListingTitleColumn a:link { color: #000; }
+.ListingTitleColumn a:visited { color: #000; }
+.ListingTitleColumn a:hover { color: #000; }
+.ListingTitleColumn a:active { color: #000; }
+.ShippingOptionsColumn { vertical-align: bottom; }
+.ShippingOptionsColumn div
+{
+	color: #666; 
+	font-size: 100%; 
+	padding: 3px 3px 10px 3px; 
+	font-weight: normal;
+	background: #efefef;
+	line-height: 18px;
+}
+.ShippingOptionsColumn div a { color: #666; font-size: 95%; font-weight: normal; margin-left: 5px;}
+.ShippingOptionsColumn div a:link { color: #666; }
+.ShippingOptionsColumn div a:visited { color: #666; }
+.ShippingOptionsColumn div a:hover { color: #666; }
+.ShippingOptionsColumn div a:active { color: #666; }
+.ViewShippingOptionsLink { }
+
+#ShippingOptionsList { width: 500px; border: 0px; padding: 3px; }
+#ShippingOptionsList td { text-align: left; font-size: .7em; }
+.RowStyleA { background-color: #fff; }
+.RowStyleB { background-color: #e9e9e9; }
+.ShippingOptionNameColumn { font-weight: bold; }
+.ShippingOptionAmountColumn {  }
+.DialogTitle { width: 450px; font-size: .8em; overflow: hidden; text-align: left; }
+/*------------------ item list pages / shipping details (end) -----------------*/
+
+/*------------------ view feedback pages (begin) -----------------*/
+.FeedbackTabsContainer 
+{
+    width: 98%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    height: 29px;
+    clear: both;
+}
+        
+.FeedbackTab_Inactive
+{
+    background: url(../../../Content/images/Template/Sprite001.png) 0% -301px repeat-x;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    float: left;
+    height: 23px;
+}
+        
+.FeedbackTab_Active
+{
+    background: #fff;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #ccc;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    float: left;
+    height: 23px;
+}
+/*------------------ view feedback pages (end) -----------------*/
+
+/*------------------ admin user management (begin) -----------------*/
+.UserMgmtTabsContainer 
+{
+    width: 97%;
+    background: #fff;
+    border-bottom: 1px solid #ccc;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 10px;
+    height: 29px;
+    clear: both;
+}
+div.UserMgmtTabsContainer a {color: #000;text-decoration: none;}
+div.UserMgmtTabsContainer a:hover {color: #2b88b7}
+
+.UserMgmtTab_Inactive
+{
+    background: url(../../../Content/images/Template/Sprite001.png) 0% -301px repeat-x;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    float: left;
+    height: 23px;
+}
+        
+.UserMgmtTab_Active
+{
+    background: #fff;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #fff;
+    border-left: 1px solid #ccc;
+    padding-top: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 10px;
+    float: left;
+    height: 23px;
+}
+
+.SideLinkRight
+{
+    padding-top: 0px;
+    float: right;
+    height: 23px;
+}
+
+.SideLinkLeft
+{
+    padding-top: 5px;
+    float: left;
+    height: 23px;
+}
+
+.UserSummaryFieldLabel
+{
+	font-weight: bold;
+	width: 150px;
+}
+
+.AdminFeedbackTable {width: 100%;padding-top: 5px;}
+.AdminFeedbackTable th{background: url(../../../Content/images/General/Gradient-fff-ccc.png) 0 -110px repeat-x;
+                    border: 1px solid #ebebeb;
+                    font-weight: bold;color: #333;}
+.AdminFeedbackTable th,td {padding: 3px;vertical-align:top;}
+ .AdminFeedbackTable th a {text-decoration: none;}
+ .AdminFeedbackTable th a:hover {text-decoration: underline;font-weight: bold;}
+ .AdminFeedbackTable i{font-size: 100%;}
+
+.AdminUserMgmtTabContainer
+{
+	margin-left: 10px;
+}
+
+.AdminPropertyFieldLabel
+{
+	width: 250px;
+}
+
+.InlineFeedbackRatingContainer
+{
+	border: 0px; margin: 0px;
+}
+.InlineFeedbackRatingContainer td
+{
+	padding: 0px 3px 0px 0px;
+}
+
+.EditUserCustomFieldsContainer
+{
+	border: 1px solid #ccc;
+	background: #f7f7f7;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+#CurrencyConvArea
+{
+	border: 1px solid #ccc;
+	background: #f7f7f7;
+	margin: 5px 0px 10px 0px;
+	padding: 10px;
+}
+
+.FormFieldsTable td { vertical-align: middle; }
+.EditUserButtonsArea
+{
+	border: 1px solid #ccc;
+	color: #333;
+	margin: 5px 0; 
+	padding: 5px; 
+	text-align: center; 
+	background: url(../../../Content/images/Template/Sprite001.png) 0% -301px repeat-x;
+}
+.EditUserButtonsArea a{color: #333;}
+.EditUserButtonsArea a:hover{color: #333; font-weight: bold;}
+
+#Form_EditAddress { width: 500px; }
+#Form_EditAddress label { width: 180px; }
+
+.AdminNavLinkRow 
+{
+	margin-top: 8px; 
+	margin-bottom: 8px;
+}
+.AdminNavLinkRow a
+{
+	text-decoration: none;
+	color: #000;
+}
+/*------------------ admin user management (end) -----------------*/
+
+/*---- admin currency management view ------*/
+#ConvertAmount { width: 60px; }
+
+
+.ClosedListing
+{
+
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 10px; 
+    background: #FFFACD;
+    
+}
+
+.ListingConfirmationDiv
+{
+    margin-left:25px;
+    margin-bottom: 25px;
+    
+}
+
+
+
+
+.WatchRemove
+{
+    position:absolute; 
+    width: 100%;
+    right: 0px; 
+    top: 0px;
+    text-align: right;
+    display: none;
+}
+
+ #progress_bar {
+    margin: 10px 0;
+    padding: 3px;
+    border: 1px solid #000;
+    font-size: 14px;
+    clear: both;
+      display: none;    
+  }  
+  #progress_bar .percent {
+    background-color: #99ccff;
+    height: auto;
+    width: 0;
+  }
+  
+  .code {
+margin: 10px;
+padding: 10px;
+font-family: Courier New;
+font-size: 11px;
+border: 1px solid #bbb;
+}
+
+.ColorRowA {
+BACKGROUND: white;
+COLOR: #000000;
+height: 25px;
+vertical-align: middle;
+padding: 0px 3px 0px 3px;
+}
+
+.ColorRowB {
+BACKGROUND: #eeeeee;
+COLOR: #000000;
+height: 25px;
+vertical-align: middle;
+padding: 0px 3px 0px 3px;
+}
+
+.TextboxHelpText { color: #ccc; }
+.ListingDateInput { width: 200px; }
+.ListingTimeInput { width: 125px; }
+#ListingDurationTable td { vertical-align: middle; }
+#ListingDurationTable label { margin: 0px 3px ; }
+#ListingDurationTable input[type='radio'] { margin: 0px; }
+.DisabledTextbox { background-color: #ebebeb; }
+
+ #ContactUsForm label {width: 90px;}
+
+table#AdminEventLog { width: 100%; }
+table#AdminEventLog th { padding: 2px; background-color: #c9c9c9;}
+table#AdminEventLog td { padding: 2px; }
+
+.eventlogparameters {    
+    width: 100%;
+}
+
+.eventlogparameters th {
+    border: 1px solid black;
+}
+
+.eventlogparameters td {
+    border: 1px solid black;
+}
+
+.stacktrace {    
+    width: 100%;    
+    height: 200px;   
+    margin: 0;
+    padding: 0;
+    resize: none;
+}
+
+.EditFeesSaveButtonsContainer {width: 740px; margin: 10px 0px;}
+
+.defaultsink {
+    position: absolute; left: -100%;
+}
+
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.pagination > li {
+  display: inline;
+}
+
+.pagination > li > a,
+.pagination > li > span {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.428571429;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+}
+
+.pagination > li:first-child > a,
+.pagination > li:first-child > span {
+  margin-left: 0;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus {
+  background-color: #eeeeee;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus {
+  z-index: 2;
+  color: #ffffff;
+  cursor: default;
+  background-color: #428bca;
+  border-color: #428bca;
+}
+
+.pagination > .disabled > span,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+  color: #999999;
+  cursor: not-allowed;
+  background-color: #ffffff;
+  border-color: #dddddd;
+}
+
+.awe-email-body-container {
+    width: 98%;
+}
+
+.awe-email-body {
+    width: 100%;
+    height: 300px;
+}
+
+.awe-email-subject {
+    width: 98%;
+}
+
+.awe-help-tips {
+    color: #000;
+    display: none;
+    margin-top: 5px;
+}
+
+.close {
+  float: right;
+  font-size: 21px;
+  font-weight: bold;
+  line-height: 1;
+  color: #000000;
+  text-shadow: 0 1px 0 #ffffff;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+}
+.close:hover,
+.close:focus {
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+#PreviewEmailTemplateContainer {
+    display: none;
+    text-align: left;
+    font-size: 12px;
+}
+#PreviewEmailSubjectContainer {
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+#PreviewEmailBodyContainer {
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+.awe-hidden {
+    display: none;
+}
+
+.awe-hidden-no-toggle {
+  display: none !important;
+}
+
+.awe-admin-dialog {
+    text-align:left;
+}
+
+.awe-percent-input {
+    width: 40px;
+}
+
+input[type="file"] {
+    display: inline-block;
+}
+
+
+.admin-welcome {
+    border: 1px solid #ccc;
+    margin: 15px;
+    border-radius: 6px;
+}
+.admin-welcome > .welcome-header, .admin-welcome > .welcome-footer{margin:0; font-size: 115%;padding: 10px;color: #000; background-color: #ebebeb;}
+.admin-welcome > .welcome-header {border-top-right-radius: 6px; border-top-left-radius: 6px;}
+.admin-welcome > .welcome-footer {border-bottom-right-radius: 6px; border-bottom-left-radius: 6px;}
+
+.admin-welcome > .welcome-body{padding: 15px;}
+.welcome-note {background-color:#feff97;margin: 15px; padding: 15px;}
+.welcome-todo{font-size: 24px;color: #999;font-weight: bold;}
+.welcome-todo:after{content: "\21D2";}
+.welcome-success{font-size: 24px;color:darkgreen;font-weight: bold;}
+.welcome-success:after{content:"\2713";}
+
+.welcome-body td { vertical-align: middle; }
