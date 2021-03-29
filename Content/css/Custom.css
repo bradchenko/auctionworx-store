@@ -33,9 +33,8 @@
     border-left-color: transparent;
     border-bottom-color: transparent;
 }
-a{color:# #fb3c3c;}
+/* a{color: #fb3c3c;} */
 a:active, a:focus, a:hover {color:#fb3c3c;}
-}
 
   body *{
     color: #000;
@@ -90,4 +89,5 @@ display: none;
 {
     .nav-secondary .nav-pills {
         display: none;
+    }
 }
