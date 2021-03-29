@@ -59,6 +59,12 @@
     </style>
     @RenderSection("head", required: false)
 	<link rel="stylesheet" type="text/css" href="Content/css/Custom.css"> 
+	<style>
+	.nav-secondary .list_category li a{
+	   padding: 3px 20px;
+	   margin-top: 0px;
+	}
+	</style>
     @Html.GetSiteContent("Literal_Header")
 </head>
 <body>
@@ -169,8 +175,49 @@
                         }
                         @if (SiteClient.EnableEvents && SiteClient.TextSetting(SiteProperties.HomepageContent) != "default")
                         {
-                            <li>
-                                @Html.ActionLink(Html.GlobalResource("EventListLinkText"), MVC.IndexAction, MVC.EventController)
+                            <li class="dropdown">
+                                <!-- @Html.ActionLink(Html.GlobalResource("EventListLinkText"), MVC.IndexAction, MVC.EventController) -->
+								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Auctions
+            </a>
+            <ul class="dropdown-menu">
+                
+        <li>
+            <a href="/Browse/C237411/General-Merchandise?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
+                General Merchandise
+            </a>
+        </li>
+        <li>
+            <a href="/Browse/C244625/Apparel?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
+                Apparel
+            </a>
+        </li>
+        <li>
+            <a href="/Browse/C244631/Baby?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
+                Baby
+            </a>
+        </li>
+        <li>
+            <a href="/Browse/C244637/Home?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
+                Home
+            </a>
+        </li>
+        <li>
+            <a href="/Browse/C244643/Electronics?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
+                Electronics
+            </a>
+        </li>
+        <li>
+            <a href="/Browse/C244649/Food-Pantry?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
+                Food Pantry
+            </a>
+        </li>
+        <li>
+            <a href="/Browse/C244655/Deals-of-the-Week?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
+                Deals of the Week
+            </a>
+        </li>
+            </ul>
                             </li>
                         }
                     </ul>
