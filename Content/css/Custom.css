@@ -113,6 +113,12 @@ form.pull-right {
     border: 1px #ddd solid;
     border-radius: 2px;
 }
+
+div.user-nav li {
+    font-size: 18px;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 675px){
 .galleryData--values, .galleryData--title {
     text-align: center;
@@ -120,7 +126,7 @@ form.pull-right {
 }
 @media (max-width: 767px)
 {
-    .nav-secondary .nav-pills {
-        display: none;
+    .gallery-quickbid {
+        padding: 0 10px;
     }
 }
