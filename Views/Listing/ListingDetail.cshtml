@@ -398,6 +398,10 @@
 {
     @Html.Partial("MakeOfferForm")
 }
+@{
+    List<CustomProperty> properties = Model.Properties.Where(p => p.Field.Group.Equals("Item") &&
+        !string.IsNullOrEmpty(p.Value)).OrderBy(cp => cp.Field.DisplayOrder).ToList();
+}
 <div class="row">
     <div class="col-xs-12 col-md-7 detail__title__wrapper">
         <span class="detail__status-label awe-rt-ColoredStatus">
@@ -490,13 +494,7 @@
         }
         @Html.Partial(Model.Type.Name + "Details", Model)
     </div>
-</div>
-@{
-    List<CustomProperty> properties = Model.Properties.Where(p => p.Field.Group.Equals("Item") &&
-        !string.IsNullOrEmpty(p.Value)).OrderBy(cp => cp.Field.DisplayOrder).ToList();
-}
-<div class="row">
-    <div class="col-xs-12 col-md-5">
+	<div class="col-xs-12 col-md-7">
         <div class="panel panel-default detail__data-panel">
             <div class="panel-heading">
                 @Html.GlobalResource("Details")
@@ -560,8 +558,10 @@
             </div>
         </div>
     </div>
+</div>
 
-    <div class="col-xs-12 col-md-7">
+<div class="row">
+    <div class="col-xs-12 col-md-12">
         <div class="panel panel-default detail__description-panel">
             <div class="panel-heading">
                 @Html.GlobalResource("Description")
