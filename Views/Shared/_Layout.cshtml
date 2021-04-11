@@ -181,7 +181,12 @@
 								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                     <i class="fa fa-legal"></i>&nbsp;Auctions
                                 </a>
-                                <ul class="dropdown-menu">                                    
+                                <ul class="dropdown-menu">   
+<li>
+                                        <a href="/Browse">
+                                            View All
+                                        </a>
+                                    </li>								
                                     <li>
                                         <a href="/Browse/C237411/General-Merchandise?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
                                             General Merchandise
@@ -381,6 +386,10 @@
     <script>
         $(document).ready(function () {
             if ('@ViewData["FullTextQuery"]' != '') $("input[name='FullTextQuery']").val('@ViewData["FullTextQuery"]');
+			$('.more li:eq(0)').addClass("visible-xs");
+			$('.more li:eq(0)').insertBefore('.more');
+			$('.more li:eq(0)').addClass("visible-xs");
+			$('.more li:eq(0)').insertBefore('.more');
         });
     </script>
 
@@ -428,7 +437,7 @@
             <script>
                 var demoBiddingEnabled = true
                 $(document).ready(function () {
-
+					
                     function randomIntFromInterval(min, max) {
                         return Math.floor(Math.random() * (max - min + 1) + min);
                     }
