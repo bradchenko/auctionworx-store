@@ -133,7 +133,7 @@
                 <div class="collapse navbar-collapse" id="awe-main-nav">
                     <ul class="nav navbar-nav hidden-xs">
                         <li>
-                            <a href="@Html.Base()">@Html.GlobalResource("Home")</a>
+                            <a href="@Html.Base()"><i class="fa fa-home"></i>&nbsp;@Html.GlobalResource("Home")</a>
                         </li>
                         @if (!SiteClient.EnableEvents || (SiteClient.EnableEvents && SiteClient.TextSetting(SiteProperties.HomepageContent) != "browse"))
                         {
