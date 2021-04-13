@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@(string.IsNullOrEmpty(ViewBag.SiteTitle) ? SiteClient.Settings[SiteProperties.SiteTitle] : ViewBag.SiteTitle)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     @if (IsSectionDefined("metaContent"))
     {
         @RenderSection("metaContent")
@@ -59,7 +60,7 @@
     </style>
     @RenderSection("head", required: false)
     <link rel="stylesheet" type="text/css" href="Content/font-awesome.css?v=20210407">
-	<link rel="stylesheet" type="text/css" href="Content/css/Custom.css?v=2.1.0"> 
+	<link rel="stylesheet" type="text/css" href="Content/css/Custom.css?v=2.2.1"> 
 	<style>
 	.nav-secondary .list_category li a{
 	   padding: 3px 20px;
@@ -75,6 +76,7 @@
     }
     <header class="header-splash">
         <div class="container">
+            <div id="desktop_login_menu">@Html.Partial("LogOnUserControl")</div>
             <div class="logo">
                 @if (!SiteClient.DemoEnabled)
                 {
@@ -182,7 +184,7 @@
                                     <i class="fa fa-legal"></i>&nbsp;Auctions
                                 </a>
                                 <ul class="dropdown-menu">   
-<li>
+                                    <li>
                                         <a href="/Browse">
                                             View All
                                         </a>
@@ -225,27 +227,25 @@
                                 </ul>
                             </li>
                         }                        
-                    @Html.GetSiteContent("Literal_SubNavigation")                
+                        @Html.GetSiteContent("Literal_SubNavigation")                
                     </ul>
-
-                    @Html.Partial("LogOnUserControl")
+                    <div id="mobile_login_menu">@Html.Partial("LogOnUserControl")</div>
                 </div>
             </nav>
             <div class="nav-secondary clearfix">
                 <p id="header_banner_pop">Your Local Auction, Buy-it-now, & Reseller Box Merchant. Source Today and Pickup From Your Local Warehouse. Pick up Monday - Friday from 10am - 5:30pm</p>
                 @using (Html.BeginForm("Search", "Listing", FormMethod.Get, new { @class = "pull-right form-inline" }))
                 {
-                    <div class="btn-group pull-right" role="group">
+                    <div class="btn-group pull-left" role="group">
                         <a class="dropdown-toggle btn btn-sm search" data-toggle="dropdown"><span class="glyphicon glyphicon-plus"></span></a>
                         <ul class="dropdown-menu advanced-search" role="menu">
                             <li>@Html.ActionLink(Html.GlobalResource("AdvancedSearch"), "Search", "Listing")</li>
                         </ul>
                     </div>
-
                     <div class="input-group">
                         @Html.TextBox(Fields.FullTextQuery, null, new { @size = 15, @class = "form-control input-sm ", @id = "FullTextQuery1", placeholder = Html.GlobalResourceString("EnterKeywords") })
                         <div class="input-group-btn" role="group">
-                            <button class="btn btn-default btn-sm" type="submit">@Html.GlobalResource("Search")</button>
+                            <button id="search_submit" class="btn btn-default btn-sm" type="submit"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 }                
@@ -390,6 +390,9 @@
 			$('.more li:eq(0)').insertBefore('.more');
 			$('.more li:eq(0)').addClass("visible-xs");
 			$('.more li:eq(0)').insertBefore('.more');
+            $('.more li:eq(0)').addClass("visible-xs");
+			$('.more li:eq(0)').insertBefore('.more');
+            $('.user-nav li:eq(1)').addClass('round_item');
         });
     </script>
 
