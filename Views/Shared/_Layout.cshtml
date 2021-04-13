@@ -180,51 +180,9 @@
                         {
                             <li class="dropdown">
                                 <!-- @Html.ActionLink(Html.GlobalResource("EventListLinkText"), MVC.IndexAction, MVC.EventController) -->
-								<a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+								<a href="/Events">
                                     <i class="fa fa-legal"></i>&nbsp;Auctions
                                 </a>
-                                <ul class="dropdown-menu">   
-                                    <li>
-                                        <a href="/Browse">
-                                            View All
-                                        </a>
-                                    </li>								
-                                    <li>
-                                        <a href="/Browse/C237411/General-Merchandise?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
-                                            General Merchandise
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/Browse/C244625/Apparel?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
-                                            Apparel
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/Browse/C244631/Baby?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
-                                            Baby
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/Browse/C244637/Home?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
-                                            Home
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/Browse/C244643/Electronics?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
-                                            Electronics
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/Browse/C244649/Food-Pantry?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
-                                            Food Pantry
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="/Browse/C244655/Deals-of-the-Week?CategoryID=9&ListingType=FixedPrice&StatusFilter=active_only">
-                                            Deals of the Week
-                                        </a>
-                                    </li>
-                                </ul>
                             </li>
                         }                        
                         @Html.GetSiteContent("Literal_SubNavigation")                
@@ -233,7 +191,7 @@
                 </div>
             </nav>
             <div class="nav-secondary clearfix">
-                <p id="header_banner_pop">Your Local Auction, Buy-it-now, & Reseller Box Merchant. Source Today and Pickup From Your Local Warehouse. Pick up Monday - Friday from 10am - 5:30pm</p>
+                <p id="header_banner_pop">Your Local Auction, Buy-it-now, & Reseller Box Merchant. Source Today and Pickup From Your Local Warehouse. Pick up Tuesday - Friday from 10am - 5:30pm</p>
                 @using (Html.BeginForm("Search", "Listing", FormMethod.Get, new { @class = "pull-right form-inline" }))
                 {
                     <div class="btn-group pull-left" role="group">
