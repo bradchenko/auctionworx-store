@@ -1,5 +1,5 @@
 ﻿@model Listing
-
+<div class="panel panel-default detail__data-panel">
 @{
     bool ppAccepted =
         (Model.OwnerAcceptsPayPal() && SiteClient.BoolSetting(SiteProperties.PayPal_Enabled));
@@ -9,11 +9,12 @@
     string pmtInstr = Model.PaymentInstructions();
     if (ppAccepted || ccAccepted || !string.IsNullOrEmpty(pmtInstr))
     {
-        <div class="detail__payment-options">
+	<div class="panel-heading">
         <strong>
             @Html.GlobalResource("PaymentOptions")
         </strong>
-            <br />
+		</div>
+	<div class="panel-body">
                 @if (ppAccepted)
                 {
                     @Html.GlobalResource("SellerAcceptsPayPal")<br />
@@ -24,13 +25,11 @@
                 }
                             @if (!string.IsNullOrEmpty(pmtInstr))
                             {
-
-                                <br />
             <strong>@Html.GlobalResource("PaymentInstructions")</strong><br />
                         @pmtInstr
                     
                 }
-            
-        </div>
+		</div>
     }
 }
+</div>

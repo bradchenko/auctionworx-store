@@ -41,21 +41,22 @@
         {
             sellerPaymentData += "  seller-data__fullwidth";
         }
-        <div class="detail__seller-data">
-            <div class="seller-data__container">
-                @{
+        <div>
+			<div class="row">
+			@{
                     if (showSellerData)
                     {
-                        <div class="seller-data__summary">
-                            @Html.Partial("ListingDetail_SellerUserSummary")
-                        </div>
-                    }
+			<div class="col-xs-12 col-sm-12">
+               @Html.Partial("ListingDetail_SellerUserSummary")
+			</div>
+			}
                 }
-                <div class="@sellerPaymentData">
-                    @Html.Partial("FixedPricePaymentOptions")
-                </div>
-            </div>
+			<div class="col-xs-12 col-sm-12">
+               @Html.Partial("FixedPricePaymentOptions")
+			</div>
+			
             @Html.Partial("ShippingOptionDisplay")
+			</div>
         </div>
                     }
 }

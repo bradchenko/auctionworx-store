@@ -6,26 +6,32 @@
 @if (User.Identity.IsAuthenticated && Model.Context.Watched)
 {
     <a href="@Url.Action(MVC.BiddingWatchingAction, MVC.AccountController)" class="awe-rt-hideable awe-rt-ShowStatusActive awe-rt-ShowStatusPreview detail__action-link disabled" title="@Html.GlobalResource("GoToWatchList")">
-        @if (showWatchCount)
+        <div class="add"><span class="glyphicon glyphicon-ok"></span></div>
+		<div>
+		@if (showWatchCount)
         {
+			@Html.GlobalResource("Watching")
             <span class="detail__action-link-count">
                 @Html.GlobalResource("WatchCount", UserClient.GetWatchCount(Model.ID))
             </span>
         }
-        <span class="glyphicon glyphicon-ok"></span>
-        <span class="detail__action-link-text">@Html.GlobalResource("Watching") </span>
+		</div>
     </a>
 }
 else
 {
     <a href="@Url.Action(MVC.AddWatchAction, MVC.ListingController, new { id = Model.ID })" class="awe-rt-hideable awe-rt-ShowStatusActive awe-rt-ShowStatusPreview detail__action-link">
+		<div class="add"><span class="glyphicon glyphicon-plus"></span></div>
+		<div>
        @if (showWatchCount)
        {
+		@Html.GlobalResource("AddtoWatchList")
         <span class="detail__action-link-count">
             @Html.GlobalResource("WatchCount", UserClient.GetWatchCount(Model.ID))
         </span>
        }
-         <span class="glyphicon glyphicon-plus"></span>
-        @Html.GlobalResource("AddtoWatchList") 
+         
+         
+		</div>
     </a>
 }

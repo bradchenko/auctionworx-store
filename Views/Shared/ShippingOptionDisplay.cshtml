@@ -1,15 +1,15 @@
 ﻿@model Listing
 @if ((bool)ViewData[SiteProperties.EnableShipping] && Model.ShippingOptions.Count > 0)
 {
-    <div class="row">
         <div class="col-xs-12">
+		<div class="panel panel-default detail__data-panel">
+		<div class="panel-heading">
+        <strong>
+            @Html.GlobalResource("ShippingOptions")
+        </strong>
+		</div>
+	<div class="panel-body">
             <table class="table shipping-table">
-                <thead>
-                    <tr>
-                        <th>@Html.GlobalResource("ShippingOptions")</th>
-                        <th></th>
-                    </tr>
-                </thead>
                 <tbody>
                     @{
                         const int maxToDisplay = 2;
@@ -26,7 +26,7 @@
                         displayedCount++;
                     }
                     <tr>
-                        <td>@option.Method.Name</td>
+                        <td style="color: #5BC0DE;">@option.Method.Name</td>
                         <td>
                             @Html.LocalCurrency(option.FirstItemAmount, Model.Currency.Code)
                             @if (option.AdditionalItemAmount.HasValue)
@@ -49,9 +49,9 @@
                 </tbody>
 
             </table>
-
+			</div>
+</div>
         </div>
-    </div>
                         if (displayedCount < Model.ShippingOptions.Count)
                         {
                             string pageTitle = Html.GlobalResource("ShippingOptionsFor") + ": " + Model.Title;

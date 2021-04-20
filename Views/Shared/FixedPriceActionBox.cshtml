@@ -36,31 +36,36 @@
     </div>
 
     <div class="row">
-            <div class="col-xs-12 col-sm-6 watching__wrapper">
-                @Html.Partial("ListingDetail_AddWatch")
-            </div>
+            
         <div class="col-xs-12 col-sm-6">
-            <div class="form-group">
+            <div class="form-group quantitylist">
                 @if (Model.CurrentQuantity > 99)
                 {
                     <div class="input-group">
-                        <span class="input-group-addon">@Html.Resource("FixedPriceListing, Quantity")</span>
+                        <span class="quantitytext">@Html.Resource("FixedPriceListing, Quantity")</span>
                         @Html.TextBox("Quantity", 1, new { @class = "form-control", min = "1" })
                     </div>
                 }
                 else
                 {
+				<div class="input-group">
+                        <span class="quantitytext">@Html.Resource("FixedPriceListing, Quantity")</span>
                     @Html.DropDownList("Quantity", Enumerable.Range(1, Model.CurrentQuantity).Select(i =>
                         new SelectListItem {
-                            Text = Html.Resource("FixedPriceListing, Quantity") + " : " + i.ToString(),
+                            Text = i.ToString(),
                             Value = i.ToString()
                         }),
                         new { @class = "form-control", id = "Quantity", name = "Quantity" })
+						</div>
                 }
             </div>
+			</div>
+			<div class="col-xs-12 col-sm-6">
             <div class="form-group">
-                <input type="submit" class="btn btn-success btn-block" onclick="return checkValues()" value="@Html.Resource("FixedPriceListing, BuyNow")" />
+                <input type="submit" class="btn btn-buynow btn-block" onclick="return checkValues()" value="@Html.Resource("FixedPriceListing, BuyNow")" />
             </div>
+			</div>
+			<div class="col-xs-12 col-sm-12">
             @{ 
                 bool makeOfferAvailable = false;
             }
@@ -112,24 +117,29 @@
                 }
             }
         </div>
-
-        <div class="col-xs-12 col-sm-6">
+<div class="col-xs-12 col-lg-6 col-md-12 col-sm-12" style="margin-bottom:10px">
+                @Html.Partial("ListingDetail_AddWatch")
+            </div>
+        <div class="col-xs-12 col-lg-6 col-md-12 col-sm-12" style="margin-bottom:10px">
             <div class="detail__properties">
                 
                 @if (User.Identity.IsAuthenticated)
                 {
                     if (Model.AcceptedListingActionCount() > 0)
                     {
-                        <a href="@Url.Action(MVC.HistoryAction, new { id = Model.ID, currency = Model.Currency.Code })" class="detail__action-link"><span class="glyphicon glyphicon-tag"></span> @Html.Resource("FixedPriceListing, PurchaseHistory")</a>
+                        <a href="@Url.Action(MVC.HistoryAction, new { id = Model.ID, currency = Model.Currency.Code })" class="detail__action-link"><div class="add"><span class="glyphicon glyphicon-tag"></span> </div><div>@Html.Resource("FixedPriceListing, PurchaseHistory")</div></a>
                     }
                     else
                     {
-                        <a href="@Url.Action(MVC.HistoryAction, new { id = Model.ID, currency = Model.Currency.Code })" class="detail__action-link awe-hidden PurchaseHistoryButton"><span class="glyphicon glyphicon-tag"></span> @Html.Resource("FixedPriceListing, PurchaseHistory")</a>
+                        <a href="@Url.Action(MVC.HistoryAction, new { id = Model.ID, currency = Model.Currency.Code })" class="detail__action-link awe-hidden PurchaseHistoryButton"><div class="add"><span class="glyphicon glyphicon-tag"></span></div><div> @Html.Resource("FixedPriceListing, PurchaseHistory")</div></a>
 
                     }
                 }
                 
-                <div class="fee">
+            </div>
+        </div>
+		<div class="col-xs-12 col-sm-12">
+		<div class="fee">
 
                     @{
                         decimal buyersPremiumPct = 0;
@@ -150,7 +160,6 @@
                     @Html.Partial("BuyerFee")
 
                 </div>
-            </div>
-        </div>
+		</div>
     </div>
 </div>
